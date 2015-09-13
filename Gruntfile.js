@@ -91,6 +91,12 @@ module.exports = function (grunt) {
 					dest: 'dist/'
 				}]
 			}
+		},
+		symlink: {
+			data: {
+				target: '/srv/http/madokami_com/data',
+				link: 'dist/data'
+			}
 		}
 	});
 
@@ -101,6 +107,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-symbolic-link');
 
-	grunt.registerTask('default', ['mkdir', 'swig', 'htmlmin', 'cssmin', 'uglify', 'imagemin', 'copy']);
+	grunt.registerTask('default', ['mkdir', 'swig', 'htmlmin', 'cssmin', 'uglify', 'imagemin', 'copy', 'symlink']);
 };
