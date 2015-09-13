@@ -8,7 +8,7 @@ define('POMF_DB_USER', getenv('POMF_DB_USER'));
 define('POMF_DB_PASS', getenv('POMF_DB_PASS'));
 
 // Root location of files
-define('POMF_FILES_ROOT', '/home/pomf/data/');
+define('POMF_FILES_ROOT', '/srv/http/madokami_com/data/');
 // Maximum number of iterations while generating a new name
 define('POMF_FILES_RETRIES', 15);
 // URL to prepend to output (include trailing slash)
